@@ -41,3 +41,11 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+
+// const res = fetch("/api/auth/registration",{
+//     method : "POST",
+//     headers : {"Content-Type":"application/json"},
+//     body: JSON.stringify({email,password})
+// });
+
+// res.json();
