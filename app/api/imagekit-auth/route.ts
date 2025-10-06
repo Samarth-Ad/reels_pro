@@ -8,5 +8,14 @@ const imagekit  = new ImageKit({
 });
 
 export async function GET() {
-    return NextResponse.json(imagekit.getAuthenticationParameters());
+    try{
+
+        return NextResponse.json(imagekit.getAuthenticationParameters());
+    }
+    catch(error){
+        return NextResponse.json(
+            {error:"Imagekit Auth Failed"},
+            {status: 500}
+        )
+    }
 }
